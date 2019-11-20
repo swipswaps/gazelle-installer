@@ -41,7 +41,11 @@ void printHelp();
 
 int main(int argc, char *argv[])
 {
+    printf("[out]The quick brown fox jumps over the lazy dog.\n");
+    fprintf(stderr, "[err]The quick brown fox jumps over the lazy dog.\n");
     QApplication a(argc, argv);
+    printf("[out]The fox brown quick over jumps lazy the dog.\n");
+    fprintf(stderr, "[err]The fox brown quick over jumps lazy the dog.\n");
 
     if (a.arguments().contains("--help") || a.arguments().contains("-h") ) {
         printHelp();
